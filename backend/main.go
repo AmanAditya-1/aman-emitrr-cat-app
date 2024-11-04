@@ -36,7 +36,7 @@ func main() {
 	router.HandleFunc("/api/win", updateWins).Methods("POST")
 
 	c := cors.New(cors.Options{
-		AllowedOrigins: []string{"http://localhost:3000"},
+		AllowedOrigins: []string{"https://aman-emitrr-cat-app.netlify.app/"},
 		AllowedMethods: []string{"GET", "POST", "OPTIONS"},
 		AllowedHeaders: []string{"Content-Type", "Authorization"},
 	})
