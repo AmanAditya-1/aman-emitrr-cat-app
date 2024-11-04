@@ -42,8 +42,7 @@ Try the game live here:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/exploding-kitten-game.git
-   cd exploding-kitten-game
+   git clone https://github.com/AmanAditya-1/aman-emitrr-cat-app.git
 
 2. **Install Frontend Dependencies**
    ```bash
@@ -53,8 +52,8 @@ Try the game live here:
 3. **Backend Environment Variables**
    ```bash
    PORT=8080                       # Port for the backend server
-   REDIS_DATABASE_ADDRESS=            # Redis server host
-   REDIS_DATABASE_PASSWORD=                 # Redis server port
+   REDIS_DATABASE_ADDRESS=         # Redis server host
+   REDIS_DATABASE_PASSWORD=        # Redis server port
 
 
 4. **Frontend Environment Variables**
