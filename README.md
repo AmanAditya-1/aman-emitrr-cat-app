@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+# Exploding Kitten Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive card game created with **ReactJS**, **Redux**, **Golang**, and **Redis**, inspired by the popular "Exploding Kittens" game. This application allows users to draw cards with a bit of suspense—avoid the bomb, defuse when needed, and try your luck!
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Interactive gameplay with randomized card draws.
+- Smooth game state management with Redux.
+- Backend logic implemented in Golang.
+- Redis database used for real-time state storage and retrieval.
+- Game restart and defuse mechanics to enhance gameplay.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Frontend**: ReactJS, Redux
+- **Backend**: Golang
+- **Database**: Redis
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Game Rules
 
-### `npm test`
+1. **Cat Card**: If a cat card is drawn, it is removed from the deck.
+2. **Exploding Kitten (Bomb)**: If the card is a bomb, the player loses the game immediately.
+3. **Defusing Card**: Drawn defuse cards are removed from the deck. They can be used to defuse one bomb if drawn later.
+4. **Shuffle Card**: If a shuffle card is drawn, the deck is refilled with 5 cards, and the game restarts.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo
 
-### `npm run build`
+Try the game live here:
+- **Frontend**: [Exploding Kitten Game (Live)](https://aman-emitrr-cat-app.netlify.app/)
+- **Backend API**: [Exploding Kitten API (Live)](https://aman-emitrr-cat-app.onrender.com)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation for running locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- [Node.js](https://nodejs.org/)
+- [Golang](https://golang.org/)
+- [Redis](https://redis.io/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Steps
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/exploding-kitten-game.git
+   cd exploding-kitten-game
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. **Install Frontend Dependencies**
+   ```bash
+   cd frontend
+   npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. **Backend Environment Variables**
+   ```bash
+   PORT=8080                       # Port for the backend server
+   REDIS_DATABASE_ADDRESS=            # Redis server host
+   REDIS_DATABASE_PASSWORD=                 # Redis server port
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Frontend Environment Variables**
+   ```bash
+   REACT_APP_BACKEND_URL=
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Start the backend server**
+   ```bash
+   cd backend
+   go run main.go
+
+6. **Start the frontend server**
+   ```bash
+   cd frontend
+   npm run start
+
+7. **Open your browser and go to http://localhost:3000.**
+
+8. **Draw cards and try to avoid the bomb while using defuse and shuffle cards strategically!**
+
+
+
+
+
+
+
