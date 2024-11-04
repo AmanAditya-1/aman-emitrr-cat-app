@@ -43,8 +43,9 @@ func main() {
 
 	handler := c.Handler(router)
 
+	port := os.Getenv("PORT")
 	log.Println("Server starting on :8080...")
-	log.Fatal(http.ListenAndServe(":8080", handler))
+	log.Fatal(http.ListenAndServe(":"+port, handler))
 }
 
 func getLeaderboard(w http.ResponseWriter, r *http.Request) {
