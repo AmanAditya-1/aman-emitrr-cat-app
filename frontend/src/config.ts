@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_BACKEND_URL;
+const API_BASE_URL = "https://aman-emitrr-cat-app.onrender.com";
 
 export const API_ENDPOINTS = {
   LEADERBOARD: `${API_BASE_URL}/api/leaderboard`,

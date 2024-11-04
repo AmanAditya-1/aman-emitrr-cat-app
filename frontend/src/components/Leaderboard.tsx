@@ -5,7 +5,7 @@ import { AppDispatch, RootState } from '../redux/store';
 import io from 'socket.io-client';
 
 
-const socket = io(process.env.REACT_APP_BACKEND_URL);
+const socket = io("https://aman-emitrr-cat-app.onrender.com");
 
 export default function Leaderboard() {
   const dispatch = useDispatch<AppDispatch>();
